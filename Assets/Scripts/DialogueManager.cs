@@ -7,6 +7,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] DialogueTypewriter typeWriter;
     [SerializeField] GameObject dialogueBox;
     [SerializeField] GameObject continueText;
+    [SerializeField] float globalCharPerSecond;
 
     bool AnyKeyDown()
     {
@@ -32,7 +33,8 @@ public class DialogueManager : MonoBehaviour
 
         while (index < dialogues.Length)
         {
-            yield return typeWriter.StartTypewriter(dialogues[index].dialogue, dialogues[index].charPerSecond);
+            float charPerSecond = dialogues[index].charPerSecond > 0f ? dialogues[index].charPerSecond : globalCharPerSecond;
+            yield return typeWriter.StartTypewriter(dialogues[index].dialogue, charPerSecond);
             continueText.SetActive(true);
             yield return new WaitUntil(AnyKeyDown);
             continueText.SetActive(false);
