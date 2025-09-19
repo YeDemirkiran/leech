@@ -6,15 +6,21 @@ using UnityEngine;
 public class DialogueTypewriter : MonoBehaviour
 {
     string dialogueText;
-    [SerializeField] float charPerSecond;
+    float charPerSecond;
     TMP_Text text;
 
     void Awake()
     {
         text = GetComponent<TMP_Text>();
-        dialogueText = text.text;
-        text.text = "";
-        StartCoroutine(TypewriteIE());
+    }
+
+    public IEnumerator StartTypewriter(string text, float charPerSecond)
+    {
+        dialogueText = text;
+        this.charPerSecond = charPerSecond;
+        this.text.text = "";
+        StopAllCoroutines();
+        yield return StartCoroutine(TypewriteIE());
     }
 
     IEnumerator TypewriteIE()

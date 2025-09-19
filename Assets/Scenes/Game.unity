@@ -505,6 +505,7 @@ GameObject:
   - component: {fileID: 693038046}
   - component: {fileID: 693038048}
   - component: {fileID: 693038047}
+  - component: {fileID: 693038049}
   m_Layer: 5
   m_Name: Dialogue Box
   m_TagString: Untagged
@@ -570,6 +571,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693038045}
   m_CullTransparentMesh: 1
+--- !u!114 &693038049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693038045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 384e27b4ba27d22488bb79dd2d79609e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeWriter: {fileID: 1117511187}
+  dialogues:
+  - dialogue: "Selam amc\u0131k"
+    charPerSecond: 15
+  - dialogue: "\xD6zledin mi beni"
+    charPerSecond: 15
 --- !u!1 &1117511183
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +600,7 @@ GameObject:
   - component: {fileID: 1117511184}
   - component: {fileID: 1117511186}
   - component: {fileID: 1117511185}
+  - component: {fileID: 1117511187}
   m_Layer: 5
   m_Name: Dialogue Text
   m_TagString: Untagged
@@ -706,6 +726,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117511183}
   m_CullTransparentMesh: 1
+--- !u!114 &1117511187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117511183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5adb9cd2e33cfa34aa9285b338bfcb88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1295830875
 GameObject:
   m_ObjectHideFlags: 0
