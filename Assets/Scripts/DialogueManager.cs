@@ -12,10 +12,12 @@ public class Dialogue
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] DialogueTypewriter typeWriter;
+    [SerializeField] GameObject continueText;
     [SerializeField] Dialogue[] dialogues;
 
     void Start()
     {
+        continueText.SetActive(false);
         StartCoroutine(DialogueRoutine());
     }
 
@@ -31,7 +33,9 @@ public class DialogueManager : MonoBehaviour
         while (index < dialogues.Length)
         {
             yield return typeWriter.StartTypewriter(dialogues[index].dialogue, dialogues[index].charPerSecond);
+            continueText.SetActive(true);
             yield return new WaitUntil(AnyKeyDown);
+            continueText.SetActive(false);
             index++;
         }
     }
