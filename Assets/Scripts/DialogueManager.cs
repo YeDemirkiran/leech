@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] GameObject dialogueBox;
     [SerializeField] GameObject continueText;
     [SerializeField] float globalCharPerSecond;
+
+    [SerializeField] UnityEvent onDialogueEnd;
 
     bool AnyKeyDown()
     {
@@ -42,5 +45,6 @@ public class DialogueManager : MonoBehaviour
         }
         dialogueBox.SetActive(false);
         continueText.SetActive(false);
+        onDialogueEnd?.Invoke();
     }
 }

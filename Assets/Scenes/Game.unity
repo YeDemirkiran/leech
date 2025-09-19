@@ -339,6 +339,8 @@ PlayableDirector:
     value: {fileID: 1261881095}
   - key: {fileID: 728886449224045271, guid: 5ad5282505034394594ecce6c7ce1e54, type: 2}
     value: {fileID: 1255734168}
+  - key: {fileID: 5097722747240271282, guid: 5ad5282505034394594ecce6c7ce1e54, type: 2}
+    value: {fileID: 1261881090}
   m_ExposedReferences:
     m_References:
     - 06e53c2b234188542b6c6d062c3d9627: {fileID: 1255734165}
@@ -672,7 +674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.059184756, g: 0.06428669, b: 0.09433961, a: 1}
+  m_Color: {r: 0.028301895, g: 0.028301895, b: 0.028301895, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1049,6 +1051,21 @@ MonoBehaviour:
   dialogueBox: {fileID: 693038045}
   continueText: {fileID: 1128437060}
   globalCharPerSecond: 15
+  onDialogueEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 459468050}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: GlitchExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1255734168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,7 +1115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1261881091
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1314,7 +1331,7 @@ GameObject:
   - component: {fileID: 1378864339}
   - component: {fileID: 1378864338}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1363,7 +1380,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 4255658864481168892, guid: f93f94193f898f841afeaec46efc1188, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1384,8 +1401,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.79, y: 2.79, z: 2.79}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
