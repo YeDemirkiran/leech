@@ -1,29 +1,29 @@
 using System.Collections;
 using UnityEngine;
 
-[System.Serializable]
-public class Dialogue
-{
-    [TextArea]
-    public string dialogue;
-    public float charPerSecond;
-}
-
 public class DialogueManager : MonoBehaviour
 {
+    Dialogue[] dialogues;
     [SerializeField] DialogueTypewriter typeWriter;
+    [SerializeField] GameObject dialogueBox;
     [SerializeField] GameObject continueText;
-    [SerializeField] Dialogue[] dialogues;
-
-    void Start()
-    {
-        continueText.SetActive(false);
-        StartCoroutine(DialogueRoutine());
-    }
 
     bool AnyKeyDown()
     {
         return Input.anyKeyDown;
+    }
+
+    private void Start()
+    {
+        dialogueBox.SetActive(false);
+    }
+
+    public void StartDialogue(DialogueObject dialogueObject)
+    {
+        dialogues = dialogueObject.dialogues;
+        dialogueBox.SetActive(true);
+        continueText.SetActive(false);
+        StartCoroutine(DialogueRoutine());
     }
 
     IEnumerator DialogueRoutine()
@@ -38,5 +38,7 @@ public class DialogueManager : MonoBehaviour
             continueText.SetActive(false);
             index++;
         }
+        dialogueBox.SetActive(false);
+        continueText.SetActive(false);
     }
 }
