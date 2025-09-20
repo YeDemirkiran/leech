@@ -16,7 +16,7 @@ public class DialogueManager : MonoBehaviour
 
     bool AnyKeyDown()
     {
-        return Input.anyKeyDown;
+        return (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space));
     }
 
     private void Start()
