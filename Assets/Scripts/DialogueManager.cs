@@ -43,11 +43,20 @@ public class DialogueManager : MonoBehaviour
 
         while (index < dialogues.Length)
         {
-            float charPerSecond = dialogues[index].charPerSecond > 0f ? dialogues[index].charPerSecond : globalCharPerSecond;
-            yield return typeWriter.StartTypewriter(dialogues[index].dialogue, charPerSecond);
-            continueText.SetActive(true);
-            yield return new WaitUntil(AnyKeyDown);
-            continueText.SetActive(false);
+            if (dialogues[index].type == Dialogue.Type.Dialogue)
+            {
+                dialogueBox.SetActive(true);
+                float charPerSecond = dialogues[index].charPerSecond > 0f ? dialogues[index].charPerSecond : globalCharPerSecond;
+                yield return typeWriter.StartTypewriter(dialogues[index].dialogue, charPerSecond);
+                continueText.SetActive(true);
+                yield return new WaitUntil(AnyKeyDown);
+                continueText.SetActive(false);
+            }
+            else
+            {
+                dialogueBox.SetActive(false);
+                yield return new WaitForSeconds(dialogues[index].delay);
+            }
             index++;
         }
         dialogueBox.SetActive(false);

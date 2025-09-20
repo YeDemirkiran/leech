@@ -13,30 +13,53 @@ MonoBehaviour:
   m_Name: Stage 0 Dialogues
   m_EditorClassIdentifier: 
   dialogues:
-  - ownerID: PLAYER
+  - type: 0
+    ownerID: PLAYER
     dialogue: Selam.
     charPerSecond: 0
-  - ownerID: CHARACTER
+    delay: 0
+  - type: 1
+    ownerID: 
+    dialogue: 
+    charPerSecond: 0
+    delay: 2
+  - type: 0
+    ownerID: CHARACTER
     dialogue: ...
     charPerSecond: 0
-  - ownerID: CHARACTER
+    delay: 0
+  - type: 0
+    ownerID: CHARACTER
     dialogue: Kimsin?
     charPerSecond: 0
-  - ownerID: PLAYER
+    delay: 0
+  - type: 0
+    ownerID: PLAYER
     dialogue: "Bir \xF6nemi var m\u0131?"
     charPerSecond: 0
-  - ownerID: CHARACTER
+    delay: 0
+  - type: 0
+    ownerID: CHARACTER
     dialogue: "Benim i\xE7in yok."
     charPerSecond: 0
-  - ownerID: CHARACTER
+    delay: 0
+  - type: 0
+    ownerID: CHARACTER
     dialogue: "Buraya nas\u0131l girdin?"
     charPerSecond: 0
-  - ownerID: PLAYER
+    delay: 0
+  - type: 0
+    ownerID: PLAYER
     dialogue: "Kap\u0131y\u0131 a\xE7\u0131k b\u0131rakm\u0131\u015Fs\u0131n."
     charPerSecond: 0
-  - ownerID: CHARACTER
+    delay: 0
+  - type: 0
+    ownerID: CHARACTER
     dialogue: "Ha... \xD6yle mi..."
     charPerSecond: 0
-  - ownerID: CHARACTER
+    delay: 0
+  - type: 0
+    ownerID: CHARACTER
     dialogue: "Git ba\u015F\u0131mdan."
     charPerSecond: 0
+    delay: 0
