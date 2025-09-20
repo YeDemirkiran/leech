@@ -12,6 +12,8 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] UnityEvent onDialogueEnd;
 
+    public DialogueObject CurrentDialogueObect { get; set; }
+
     bool AnyKeyDown()
     {
         return Input.anyKeyDown;
@@ -20,6 +22,11 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         dialogueBox.SetActive(false);
+    }
+
+    public void StartCurrentDialogue()
+    {
+        StartDialogue(CurrentDialogueObect);
     }
 
     public void StartDialogue(DialogueObject dialogueObject)

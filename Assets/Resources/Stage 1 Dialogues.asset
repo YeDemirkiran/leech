@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10968eae53775cc4a9b58f98f44fd165, type: 3}
+  m_Name: Stage 1 Dialogues
+  m_EditorClassIdentifier: 
+  dialogues:
+  - ownerID: PLAYER
+    dialogue: ...
+    charPerSecond: 0
+  - ownerID: CHARACTER
+    dialogue: Yine mi sen?
+    charPerSecond: 0
+  - ownerID: CHARACTER
+    dialogue: Ah...
+    charPerSecond: 0
+  - ownerID: CHARACTER
+    dialogue: ...
+    charPerSecond: 2
+  - ownerID: CHARACTER
+    dialogue: "\u0130lk tan\u0131\u015Fmam\u0131zda biraz kabayd\u0131m, \xF6z\xFCr
+      dilerim."
+    charPerSecond: 0
+  - ownerID: CHARACTER
+    dialogue: "Ad\u0131m CHARACTER_NAME."
+    charPerSecond: 0
+  - ownerID: PLAYER
+    dialogue: "Memnun oldum. Benim ad\u0131m da..."
+    charPerSecond: 0
+  - ownerID: CHARACTER
+    dialogue: "PLAYER_NAME. G\xFCzel isim."
+    charPerSecond: 0
+  - ownerID: PLAYER
+    dialogue: "Ad\u0131m\u0131 nerden bildin?"
+    charPerSecond: 0
+  - ownerID: CHARACTER
+    dialogue: "\xC7ok dikkatsizsin. Gitti\u011Fin her yerde kendin hakk\u0131nda
+      bir ipucu b\u0131rak\u0131yorsun."
+    charPerSecond: 0
+  - ownerID: CHARACTER
+    dialogue: "\u0130stesem senin hakk\u0131nda daha \xE7ok \u015Fey bulabilirim."
+    charPerSecond: 0
+  - ownerID: PLAYER
+    dialogue: Ne gibi?
+    charPerSecond: 0
+  - ownerID: CHARACTER
+    dialogue: Hehe...
+    charPerSecond: 0
